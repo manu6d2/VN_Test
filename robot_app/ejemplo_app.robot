@@ -41,6 +41,6 @@ Test en google
     Sleep    2
     Click Element                      name=btnK
     Sleep    5
-    wait until page contains          Test
+    wait until page contains         Renovar movil prepago con Orange
     Capture Page Screenshot
     [Teardown]    Close All Browsers
