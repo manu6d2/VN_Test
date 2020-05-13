@@ -17,7 +17,10 @@ ${noReset}    True
 Test case name
     Open Application    ${REMOTE_URL}   platformName=${platformName}  deviceName=${deviceName}  noReset=${noReset}
     # accessibility id=Mi Orange
-  
+    Sleep    10
+    Capture Page Screenshot
     Click Element    xpath=//android.widget.TextView[@content-desc="Mi Orange"]
+    Sleep    30
+    Capture Page Screenshot
 
     Close Application
