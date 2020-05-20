@@ -26,6 +26,7 @@ Test en chrome
     Set Browser Implicit Wait    30
     Input Text    Id=tag_ut_input_msisdn    &{CREDENTIALS}[MSISDN]
     Input Text    Id=tealeaf_user_password     &{CREDENTIALS}[PASS]
+    Sleep    20
     Click Button    Id=tag_ut_button_msisdn
     Sleep    1
     Click Button    Id=tag_ut_button_menu_main
