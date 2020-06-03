@@ -7,8 +7,10 @@
 *** Settings ***
 Library    AppiumLibrary
 Library    DateTime
+Library    Process
 
 *** Variables ***
+
 ${REMOTE_URL}   http://localhost:4723/wd/hub
 ${deviceName}    52007ec2fee125b5
 ${platformName}    android
@@ -16,6 +18,7 @@ ${noReset}    True
 
 *** Test Cases ***
 Test case name
+    Run process  C:/Program Files/Appium/Appium.exe  -p  4723
     Open Application    ${REMOTE_URL}   deviceName=${deviceName}  platformName=${platformName}  noReset=${noReset}
     # xpath=//android.widget.FrameLayout[@content-desc="Outlook"]/android.widget.ImageView[1]
     Capture Page Screenshot
@@ -33,11 +36,5 @@ Test case name
     Sleep    10
     Capture Page Screenshot
     Sleep    2
-    Close Application
+    Close Application  
 
-
-Capture Page Screenshot
-    ${start} =  Get Current Date
-    Wait Until Page Contains Element   xpath=//*[contains(text(), 'La TV que quiero')]
-    ${stop} =   Get Current Date
-    Capture Page Screenshot
