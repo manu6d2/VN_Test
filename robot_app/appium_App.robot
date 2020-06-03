@@ -18,7 +18,7 @@ ${noReset}    True
 
 *** Test Cases ***
 Test case name
-    Run process  C:/Program Files/Appium/Appium.exe  -p  4723
+    #Run process  C:/Program Files/Appium/Appium.exe  -p  4723
     Open Application    ${REMOTE_URL}   deviceName=${deviceName}  platformName=${platformName}  noReset=${noReset}
     # xpath=//android.widget.FrameLayout[@content-desc="Outlook"]/android.widget.ImageView[1]
     Capture Page Screenshot
