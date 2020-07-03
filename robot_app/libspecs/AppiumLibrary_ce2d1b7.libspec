@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<keywordspec name="AppiumLibrary" type="library" format="ROBOT" generated="20200504 10:37:19">
+<keywordspec format="ROBOT" generated="20200702 16:45:18" name="AppiumLibrary" type="library">
 <version>1.5.0.4</version>
 <scope>global</scope>
 <namedargs>yes</namedargs>
@@ -249,7 +249,7 @@ Some attributes can be evaluated in two different ways e.g. these evaluate the s
 <arg>locator</arg>
 <arg>expected</arg>
 </arguments>
-<doc></doc>
+<doc />
 <tags>
 </tags>
 </kw>
@@ -343,7 +343,7 @@ New in AppiumLibrary 1.4.</doc>
 <arg>locator</arg>
 <arg>expected</arg>
 </arguments>
-<doc></doc>
+<doc />
 <tags>
 </tags>
 </kw>

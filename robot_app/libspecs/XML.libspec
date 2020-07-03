@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<keywordspec name="XML" type="library" format="ROBOT" generated="20200504 08:27:55">
+<keywordspec format="ROBOT" generated="20200702 16:25:16" name="XML" type="library">
 <version>3.1.2</version>
 <scope>global</scope>
 <namedargs>yes</namedargs>

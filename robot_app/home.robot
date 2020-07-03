@@ -1,7 +1,7 @@
 *** Settings *** 
 Documentation    Ejemplo de mi primer Test con Selenium - Login miOrangeApp Movilizado
 #Incluimos la libreria de Selenium
-Library    SeleniumLibrary
+Library  SeleniumLibrary
 
 *** Variables ***
 #definimos una variable de tipo Texto donde almacenaremos el navegador a utilizar
@@ -34,4 +34,3 @@ Login firefox
     Sleep    2
     Capture Page Screenshot
     [Teardown]    Close All Browsers
-   

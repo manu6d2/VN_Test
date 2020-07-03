@@ -14,16 +14,4 @@
 	<natures>
 		<nature>org.robotframework.ide.eclipse.main.plugin.robotNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>libspecs/DateTime.py</name>
-			<type>1</type>
-			<location>C:/Users/0015256/AppData/Local/Programs/Python/Python36/lib/site-packages/robot/libraries/DateTime.py</location>
-		</link>
-		<link>
-			<name>libspecs/SeleniumLibrary.py</name>
-			<type>1</type>
-			<location>C:/Users/0015256/AppData/Local/Programs/Python/Python36/Lib/site-packages/SeleniumLibrary/__init__.py</location>
-		</link>
-	</linkedResources>
 </projectDescription>

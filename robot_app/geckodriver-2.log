@@ -1,15 +1,13 @@
-1590565433824	mozrunner::runner	INFO	Running command: "C:\\Programas\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Temp\\rust_mozprofileQpTw79"
-1590565436756	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
-1590565436839	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
-1590565436839	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
-1590565436840	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
-1590565436840	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1593705219915	mozrunner::runner	INFO	Running command: "C:\\Programas\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Temp\\rust_mozprofiletQhqYg"
+1593705220507	addons.webextension.doh-rollout@mozilla.org	WARN	Loading extension 'doh-rollout@mozilla.org': Reading manifest: Invalid extension permission: networkStatus
+1593705220539	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1593705220539	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: telemetry
+1593705220541	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1593705220542	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
 JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
-1590565442799	Marionette	INFO	Listening on port 62731
-1590565443148	Marionette	WARN	TLS certificate errors will be ignored for this session
-JavaScript error: https://cdn-eu.dynamicyield.com/api/9876420/api_static.js line 28 > eval, line 183: TypeError: nodos_topo[0].className.indexOf is not a function
-JavaScript error: https://cdn-eu.dynamicyield.com/api/9876420/api_static.js line 28 > eval, line 82: TypeError: nodos2[0].className.indexOf is not a function
-1590565470317	Marionette	INFO	Stopped listening on port 62731
+1593705223231	Marionette	INFO	Listening on port 51468
+1593705223266	Marionette	WARN	TLS certificate errors will be ignored for this session
+1593705229490	Marionette	INFO	Stopped listening on port 51468
 
 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 

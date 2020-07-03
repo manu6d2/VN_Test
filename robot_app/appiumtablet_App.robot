@@ -5,7 +5,7 @@
 #  more keywords on: http://serhatbolsu.github.io/robotframework-appiumlibrary/AppiumLibrary.html
 
 *** Settings ***
-Library           AppiumLibrary
+Library  AppiumLibrary
 
 *** Variables ***
 ${REMOTE_URL}   http://localhost:4723/wd/hub

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<keywordspec name="SeleniumLibrary" type="library" format="ROBOT" generated="20200504 10:37:18">
-<version>4.3.0</version>
+<keywordspec format="ROBOT" generated="20200702 16:45:17" name="SeleniumLibrary" type="library">
+<version>4.4.0</version>
 <scope>global</scope>
 <namedargs>yes</namedargs>
 <doc>SeleniumLibrary is a web testing library for Robot Framework.
@@ -401,10 +401,10 @@ Plugin API is new SeleniumLibrary 4.0</doc>
 <arguments>
 <arg>name</arg>
 <arg>value</arg>
-<arg>path=None</arg>
-<arg>domain=None</arg>
-<arg>secure=None</arg>
-<arg>expiry=None</arg>
+<arg>path: NoneType=None</arg>
+<arg>domain: NoneType=None</arg>
+<arg>secure: NoneType=None</arg>
+<arg>expiry: NoneType=None</arg>
 </arguments>
 <doc>Adds a cookie to your current session.
 
@@ -427,7 +427,7 @@ Prior to SeleniumLibrary 3.0 setting expiry did not work.</doc>
 <arguments>
 <arg>strategy_name</arg>
 <arg>strategy_keyword</arg>
-<arg>persist=False</arg>
+<arg>persist: bool=False</arg>
 </arguments>
 <doc>Adds a custom location strategy.
 
@@ -446,7 +446,7 @@ registered throughout the life of the test.</doc>
 <arguments>
 <arg>text=</arg>
 <arg>action=ACCEPT</arg>
-<arg>timeout=None</arg>
+<arg>timeout: NoneType=None</arg>
 </arguments>
 <doc>Verifies that an alert is present and by default, accepts it.
 
@@ -637,7 +637,7 @@ syntax.</doc>
 <kw name="Click Button">
 <arguments>
 <arg>locator</arg>
-<arg>modifier=False</arg>
+<arg>modifier: bool=False</arg>
 </arguments>
 <doc>Clicks the button identified by ``locator``.
 
@@ -655,8 +655,8 @@ The ``modifier`` argument is new in SeleniumLibrary 3.3</doc>
 <kw name="Click Element">
 <arguments>
 <arg>locator</arg>
-<arg>modifier=False</arg>
-<arg>action_chain=False</arg>
+<arg>modifier: bool=False</arg>
+<arg>action_chain: bool=False</arg>
 </arguments>
 <doc>Click the element identified by ``locator``.
 
@@ -708,7 +708,7 @@ syntax.</doc>
 <kw name="Click Image">
 <arguments>
 <arg>locator</arg>
-<arg>modifier=False</arg>
+<arg>modifier: bool=False</arg>
 </arguments>
 <doc>Clicks an image identified by ``locator``.
 
@@ -726,7 +726,7 @@ The ``modifier`` argument is new in SeleniumLibrary 3.3</doc>
 <kw name="Click Link">
 <arguments>
 <arg>locator</arg>
-<arg>modifier=False</arg>
+<arg>modifier: bool=False</arg>
 </arguments>
 <doc>Clicks a link identified by ``locator``.
 
@@ -787,7 +787,7 @@ Example:
 <kw name="Create Webdriver">
 <arguments>
 <arg>driver_name</arg>
-<arg>alias=None</arg>
+<arg>alias: NoneType=None</arg>
 <arg>kwargs={}</arg>
 <arg>**init_kwargs</arg>
 </arguments>
@@ -917,7 +917,7 @@ Example:
 <arg>locator</arg>
 <arg>attribute</arg>
 <arg>expected</arg>
-<arg>message=None</arg>
+<arg>message: NoneType=None</arg>
 </arguments>
 <doc>Verifies element identified by ``locator`` contains expected attribute value.
 
@@ -975,7 +975,7 @@ New in SeleniumLibrary 3.0.</doc>
 <kw name="Element Should Be Visible">
 <arguments>
 <arg>locator</arg>
-<arg>message=None</arg>
+<arg>message: NoneType=None</arg>
 </arguments>
 <doc>Verifies that the element identified by ``locator`` is visible.
 
@@ -996,8 +996,8 @@ message.</doc>
 <arguments>
 <arg>locator</arg>
 <arg>expected</arg>
-<arg>message=None</arg>
-<arg>ignore_case=False</arg>
+<arg>message: NoneType=None</arg>
+<arg>ignore_case: bool=False</arg>
 </arguments>
 <doc>Verifies that element ``locator`` contains text ``expected``.
 
@@ -1020,7 +1020,7 @@ not a substring.</doc>
 <kw name="Element Should Not Be Visible">
 <arguments>
 <arg>locator</arg>
-<arg>message=None</arg>
+<arg>message: NoneType=None</arg>
 </arguments>
 <doc>Verifies that the element identified by ``locator`` is NOT visible.
 
@@ -1033,8 +1033,8 @@ for more information about visibility and supported arguments.</doc>
 <arguments>
 <arg>locator</arg>
 <arg>expected</arg>
-<arg>message=None</arg>
-<arg>ignore_case=False</arg>
+<arg>message: NoneType=None</arg>
+<arg>ignore_case: bool=False</arg>
 </arguments>
 <doc>Verifies that element ``locator`` does not contain text ``expected``.
 
@@ -1055,8 +1055,8 @@ insensitive, default is False.
 <arguments>
 <arg>locator</arg>
 <arg>expected</arg>
-<arg>message=None</arg>
-<arg>ignore_case=False</arg>
+<arg>message: NoneType=None</arg>
+<arg>ignore_case: bool=False</arg>
 </arguments>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.
 
@@ -1079,8 +1079,8 @@ Use `Element Should Contain` if a substring match is desired.</doc>
 <arguments>
 <arg>locator</arg>
 <arg>not_expected</arg>
-<arg>message=None</arg>
-<arg>ignore_case=False</arg>
+<arg>message: NoneType=None</arg>
+<arg>ignore_case: bool=False</arg>
 </arguments>
 <doc>Verifies that element ``locator`` does not contain exact the text ``not_expected``.
 
@@ -1272,8 +1272,8 @@ attribute is new in SeleniumLibrary 4.0.
 Example:
 | `Add Cookie`      | foo             | bar |
 | ${cookie} =       | `Get Cookie`    | foo |
-| `Should Be Equal` | ${cookie.name}  | bar |
-| `Should Be Equal` | ${cookie.value} | foo |
+| `Should Be Equal` | ${cookie.name}  | foo |
+| `Should Be Equal` | ${cookie.value} | bar |
 | `Should Be True`  | ${cookie.expiry.year} &gt; 2017 |
 
 New in SeleniumLibrary 3.0.</doc>
@@ -1282,7 +1282,7 @@ New in SeleniumLibrary 3.0.</doc>
 </kw>
 <kw name="Get Cookies">
 <arguments>
-<arg>as_dict=False</arg>
+<arg>as_dict: bool=False</arg>
 </arguments>
 <doc>Returns all cookies of the current page.
 
@@ -1372,7 +1372,7 @@ See also `Get Vertical Position`.</doc>
 <kw name="Get List Items">
 <arguments>
 <arg>locator</arg>
-<arg>values=False</arg>
+<arg>values: bool=False</arg>
 </arguments>
 <doc>Returns all labels or values of selection list ``locator``.
 
@@ -1670,7 +1670,7 @@ Example:
 </kw>
 <kw name="Get Window Size">
 <arguments>
-<arg>inner=False</arg>
+<arg>inner: bool=False</arg>
 </arguments>
 <doc>Returns current window width and height as integers.
 
@@ -1715,7 +1715,7 @@ How to select the ``browser`` scope of this keyword, see `Get Locations`.</doc>
 <kw name="Handle Alert">
 <arguments>
 <arg>action=ACCEPT</arg>
-<arg>timeout=None</arg>
+<arg>timeout: NoneType=None</arg>
 </arguments>
 <doc>Handles the current alert and returns its message.
 
@@ -1747,7 +1747,7 @@ New in SeleniumLibrary 3.0.</doc>
 <arguments>
 <arg>locator</arg>
 <arg>password</arg>
-<arg>clear=True</arg>
+<arg>clear: bool=True</arg>
 </arguments>
 <doc>Types the given password into the text field identified by ``locator``.
 
@@ -1778,7 +1778,7 @@ logging from Selenium logs is new in SeleniumLibrary 4.2.</doc>
 <arguments>
 <arg>locator</arg>
 <arg>text</arg>
-<arg>clear=True</arg>
+<arg>clear: bool=True</arg>
 </arguments>
 <doc>Types the given ``text`` into the text field identified by ``locator``.
 
@@ -1807,7 +1807,7 @@ argument are new in SeleniumLibrary 4.0</doc>
 <arguments>
 <arg>text</arg>
 <arg>action=ACCEPT</arg>
-<arg>timeout=None</arg>
+<arg>timeout: NoneType=None</arg>
 </arguments>
 <doc>Types the given ``text`` into an input field in an alert.
 
@@ -1860,7 +1860,7 @@ syntax.</doc>
 <kw name="Location Should Be">
 <arguments>
 <arg>url</arg>
-<arg>message=None</arg>
+<arg>message: NoneType=None</arg>
 </arguments>
 <doc>Verifies that the current URL is exactly ``url``.
 
@@ -1876,7 +1876,7 @@ message.
 <kw name="Location Should Contain">
 <arguments>
 <arg>expected</arg>
-<arg>message=None</arg>
+<arg>message: NoneType=None</arg>
 </arguments>
 <doc>Verifies that the current URL contains ``expected``.
 
@@ -1893,7 +1893,7 @@ message.
 <arguments>
 <arg>locator</arg>
 <arg>x</arg>
-<arg>message=None</arg>
+<arg>message: NoneType=None</arg>
 <arg>loglevel=TRACE</arg>
 </arguments>
 <doc>*DEPRECATED in SeleniumLibrary 4.0.*, use `Page Should Contain Element` with ``limit`` argument instead.</doc>
@@ -2008,15 +2008,15 @@ syntax.</doc>
 </kw>
 <kw name="Open Browser">
 <arguments>
-<arg>url=None</arg>
+<arg>url: NoneType=None</arg>
 <arg>browser=firefox</arg>
-<arg>alias=None</arg>
-<arg>remote_url=False</arg>
-<arg>desired_capabilities=None</arg>
-<arg>ff_profile_dir=None</arg>
-<arg>options=None</arg>
-<arg>service_log_path=None</arg>
-<arg>executable_path=None</arg>
+<arg>alias: NoneType=None</arg>
+<arg>remote_url: bool=False</arg>
+<arg>desired_capabilities: NoneType=None</arg>
+<arg>ff_profile_dir: NoneType=None</arg>
+<arg>options: NoneType=None</arg>
+<arg>service_log_path: NoneType=None</arg>
+<arg>executable_path: NoneType=None</arg>
 </arguments>
 <doc>Opens a new browser instance to the optional ``url``.
 
@@ -2260,7 +2260,7 @@ the current active log level the source will not be logged.</doc>
 <kw name="Page Should Contain Button">
 <arguments>
 <arg>locator</arg>
-<arg>message=None</arg>
+<arg>message: NoneType=None</arg>
 <arg>loglevel=TRACE</arg>
 </arguments>
 <doc>Verifies button ``locator`` is found from current page.
@@ -2277,7 +2277,7 @@ searched using ``id``, ``name``, and ``value``.</doc>
 <kw name="Page Should Contain Checkbox">
 <arguments>
 <arg>locator</arg>
-<arg>message=None</arg>
+<arg>message: NoneType=None</arg>
 <arg>loglevel=TRACE</arg>
 </arguments>
 <doc>Verifies checkbox ``locator`` is found from the current page.
@@ -2293,9 +2293,9 @@ syntax.</doc>
 <kw name="Page Should Contain Element">
 <arguments>
 <arg>locator</arg>
-<arg>message=None</arg>
+<arg>message: NoneType=None</arg>
 <arg>loglevel=TRACE</arg>
-<arg>limit=None</arg>
+<arg>limit: NoneType=None</arg>
 </arguments>
 <doc>Verifies that element ``locator`` is found on the current page.
 
@@ -2326,7 +2326,7 @@ The ``limit`` argument is new in SeleniumLibrary 3.0.</doc>
 <kw name="Page Should Contain Image">
 <arguments>
 <arg>locator</arg>
-<arg>message=None</arg>
+<arg>message: NoneType=None</arg>
 <arg>loglevel=TRACE</arg>
 </arguments>
 <doc>Verifies image identified by ``locator`` is found from current page.
@@ -2343,7 +2343,7 @@ and ``loglevel`` arguments.</doc>
 <kw name="Page Should Contain Link">
 <arguments>
 <arg>locator</arg>
-<arg>message=None</arg>
+<arg>message: NoneType=None</arg>
 <arg>loglevel=TRACE</arg>
 </arguments>
 <doc>Verifies link identified by ``locator`` is found from current page.
@@ -2360,7 +2360,7 @@ and ``loglevel`` arguments.</doc>
 <kw name="Page Should Contain List">
 <arguments>
 <arg>locator</arg>
-<arg>message=None</arg>
+<arg>message: NoneType=None</arg>
 <arg>loglevel=TRACE</arg>
 </arguments>
 <doc>Verifies selection list ``locator`` is found from current page.
@@ -2376,7 +2376,7 @@ syntax.</doc>
 <kw name="Page Should Contain Radio Button">
 <arguments>
 <arg>locator</arg>
-<arg>message=None</arg>
+<arg>message: NoneType=None</arg>
 <arg>loglevel=TRACE</arg>
 </arguments>
 <doc>Verifies radio button ``locator`` is found from current page.
@@ -2393,7 +2393,7 @@ searched using ``id``, ``name`` and ``value``.</doc>
 <kw name="Page Should Contain Textfield">
 <arguments>
 <arg>locator</arg>
-<arg>message=None</arg>
+<arg>message: NoneType=None</arg>
 <arg>loglevel=TRACE</arg>
 </arguments>
 <doc>Verifies text field ``locator`` is found from current page.
@@ -2421,7 +2421,7 @@ argument.</doc>
 <kw name="Page Should Not Contain Button">
 <arguments>
 <arg>locator</arg>
-<arg>message=None</arg>
+<arg>message: NoneType=None</arg>
 <arg>loglevel=TRACE</arg>
 </arguments>
 <doc>Verifies button ``locator`` is not found from current page.
@@ -2438,7 +2438,7 @@ searched using ``id``, ``name``, and ``value``.</doc>
 <kw name="Page Should Not Contain Checkbox">
 <arguments>
 <arg>locator</arg>
-<arg>message=None</arg>
+<arg>message: NoneType=None</arg>
 <arg>loglevel=TRACE</arg>
 </arguments>
 <doc>Verifies checkbox ``locator`` is not found from the current page.
@@ -2454,7 +2454,7 @@ syntax.</doc>
 <kw name="Page Should Not Contain Element">
 <arguments>
 <arg>locator</arg>
-<arg>message=None</arg>
+<arg>message: NoneType=None</arg>
 <arg>loglevel=TRACE</arg>
 </arguments>
 <doc>Verifies that element ``locator`` is found on the current page.
@@ -2470,7 +2470,7 @@ See `Page Should Contain` for an explanation about ``message`` and
 <kw name="Page Should Not Contain Image">
 <arguments>
 <arg>locator</arg>
-<arg>message=None</arg>
+<arg>message: NoneType=None</arg>
 <arg>loglevel=TRACE</arg>
 </arguments>
 <doc>Verifies image identified by ``locator`` is found from current page.
@@ -2487,7 +2487,7 @@ and ``loglevel`` arguments.</doc>
 <kw name="Page Should Not Contain Link">
 <arguments>
 <arg>locator</arg>
-<arg>message=None</arg>
+<arg>message: NoneType=None</arg>
 <arg>loglevel=TRACE</arg>
 </arguments>
 <doc>Verifies link identified by ``locator`` is not found from current page.
@@ -2504,7 +2504,7 @@ and ``loglevel`` arguments.</doc>
 <kw name="Page Should Not Contain List">
 <arguments>
 <arg>locator</arg>
-<arg>message=None</arg>
+<arg>message: NoneType=None</arg>
 <arg>loglevel=TRACE</arg>
 </arguments>
 <doc>Verifies selection list ``locator`` is not found from current page.
@@ -2520,7 +2520,7 @@ syntax.</doc>
 <kw name="Page Should Not Contain Radio Button">
 <arguments>
 <arg>locator</arg>
-<arg>message=None</arg>
+<arg>message: NoneType=None</arg>
 <arg>loglevel=TRACE</arg>
 </arguments>
 <doc>Verifies radio button ``locator`` is not found from current page.
@@ -2537,7 +2537,7 @@ searched using ``id``, ``name`` and ``value``.</doc>
 <kw name="Page Should Not Contain Textfield">
 <arguments>
 <arg>locator</arg>
-<arg>message=None</arg>
+<arg>message: NoneType=None</arg>
 <arg>loglevel=TRACE</arg>
 </arguments>
 <doc>Verifies text field ``locator`` is not found from current page.
@@ -2561,7 +2561,7 @@ syntax.</doc>
 </kw>
 <kw name="Press Keys">
 <arguments>
-<arg>locator=None</arg>
+<arg>locator: NoneType=None</arg>
 <arg>*keys</arg>
 </arguments>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.
@@ -2821,7 +2821,7 @@ Examples:
 <kw name="Select Window">
 <arguments>
 <arg>locator=MAIN</arg>
-<arg>timeout=None</arg>
+<arg>timeout: NoneType=None</arg>
 </arguments>
 <doc>DEPRECATED in SeleniumLibrary 4.0. , use `Switch Window` instead.</doc>
 <tags>
@@ -2965,7 +2965,7 @@ Example:
 <arguments>
 <arg>width</arg>
 <arg>height</arg>
-<arg>inner=False</arg>
+<arg>inner: bool=False</arg>
 </arguments>
 <doc>Sets current windows size to given ``width`` and ``height``.
 
@@ -3011,7 +3011,7 @@ Prior to SeleniumLibrary 3.0 this keyword was named `Simulate`.</doc>
 </kw>
 <kw name="Submit Form">
 <arguments>
-<arg>locator=None</arg>
+<arg>locator: NoneType=None</arg>
 </arguments>
 <doc>Submits a form identified by ``locator``.
 
@@ -3056,7 +3056,7 @@ into a variable as below.
 <kw name="Switch Window">
 <arguments>
 <arg>locator=MAIN</arg>
-<arg>timeout=None</arg>
+<arg>timeout: NoneType=None</arg>
 <arg>browser=CURRENT</arg>
 </arguments>
 <doc>Switches to browser window matching ``locator``.
@@ -3258,7 +3258,7 @@ See `Page Should Contain Element` for an explanation about the
 <arguments>
 <arg>locator</arg>
 <arg>expected</arg>
-<arg>message=None</arg>
+<arg>message: NoneType=None</arg>
 </arguments>
 <doc>Verifies text area ``locator`` contains text ``expected``.
 
@@ -3273,7 +3273,7 @@ syntax.</doc>
 <arguments>
 <arg>locator</arg>
 <arg>expected</arg>
-<arg>message=None</arg>
+<arg>message: NoneType=None</arg>
 </arguments>
 <doc>Verifies text area ``locator`` has exactly text ``expected``.
 
@@ -3288,7 +3288,7 @@ syntax.</doc>
 <arguments>
 <arg>locator</arg>
 <arg>expected</arg>
-<arg>message=None</arg>
+<arg>message: NoneType=None</arg>
 </arguments>
 <doc>Verifies text field ``locator`` contains text ``expected``.
 
@@ -3303,7 +3303,7 @@ syntax.</doc>
 <arguments>
 <arg>locator</arg>
 <arg>expected</arg>
-<arg>message=None</arg>
+<arg>message: NoneType=None</arg>
 </arguments>
 <doc>Verifies text field ``locator`` has exactly text ``expected``.
 
@@ -3317,7 +3317,7 @@ syntax.</doc>
 <kw name="Title Should Be">
 <arguments>
 <arg>title</arg>
-<arg>message=None</arg>
+<arg>message: NoneType=None</arg>
 </arguments>
 <doc>Verifies that the current page title equals ``title``.
 
@@ -3409,8 +3409,8 @@ syntax.</doc>
 <kw name="Wait For Condition">
 <arguments>
 <arg>condition</arg>
-<arg>timeout=None</arg>
-<arg>error=None</arg>
+<arg>timeout: NoneType=None</arg>
+<arg>error: NoneType=None</arg>
 </arguments>
 <doc>Waits until ``condition`` is true or ``timeout`` expires.
 
@@ -3435,8 +3435,8 @@ Examples:
 <arguments>
 <arg>locator</arg>
 <arg>text</arg>
-<arg>timeout=None</arg>
-<arg>error=None</arg>
+<arg>timeout: NoneType=None</arg>
+<arg>error: NoneType=None</arg>
 </arguments>
 <doc>Waits until the element ``locator`` contains ``text``.
 
@@ -3453,8 +3453,8 @@ about the locator syntax.
 <arguments>
 <arg>locator</arg>
 <arg>text</arg>
-<arg>timeout=None</arg>
-<arg>error=None</arg>
+<arg>timeout: NoneType=None</arg>
+<arg>error: NoneType=None</arg>
 </arguments>
 <doc>Waits until the element ``locator`` does not contain ``text``.
 
@@ -3470,8 +3470,8 @@ about the locator syntax.
 <kw name="Wait Until Element Is Enabled">
 <arguments>
 <arg>locator</arg>
-<arg>timeout=None</arg>
-<arg>error=None</arg>
+<arg>timeout: NoneType=None</arg>
+<arg>error: NoneType=None</arg>
 </arguments>
 <doc>Waits until the element ``locator`` is enabled.
 
@@ -3492,8 +3492,8 @@ in SeleniumLibrary 3.0.</doc>
 <kw name="Wait Until Element Is Not Visible">
 <arguments>
 <arg>locator</arg>
-<arg>timeout=None</arg>
-<arg>error=None</arg>
+<arg>timeout: NoneType=None</arg>
+<arg>error: NoneType=None</arg>
 </arguments>
 <doc>Waits until the element ``locator`` is not visible.
 
@@ -3509,8 +3509,8 @@ about the locator syntax.
 <kw name="Wait Until Element Is Visible">
 <arguments>
 <arg>locator</arg>
-<arg>timeout=None</arg>
-<arg>error=None</arg>
+<arg>timeout: NoneType=None</arg>
+<arg>error: NoneType=None</arg>
 </arguments>
 <doc>Waits until the element ``locator`` is visible.
 
@@ -3526,8 +3526,8 @@ about the locator syntax.
 <kw name="Wait Until Location Contains">
 <arguments>
 <arg>expected</arg>
-<arg>timeout=None</arg>
-<arg>message=None</arg>
+<arg>timeout: NoneType=None</arg>
+<arg>message: NoneType=None</arg>
 </arguments>
 <doc>Waits until the current URL contains ``expected``.
 
@@ -3547,8 +3547,8 @@ New in SeleniumLibrary 4.0</doc>
 <kw name="Wait Until Location Does Not Contain">
 <arguments>
 <arg>location</arg>
-<arg>timeout=None</arg>
-<arg>message=None</arg>
+<arg>timeout: NoneType=None</arg>
+<arg>message: NoneType=None</arg>
 </arguments>
 <doc>Waits until the current URL does not contains ``location``.
 
@@ -3568,8 +3568,8 @@ New in SeleniumLibrary 4.3</doc>
 <kw name="Wait Until Location Is">
 <arguments>
 <arg>expected</arg>
-<arg>timeout=None</arg>
-<arg>message=None</arg>
+<arg>timeout: NoneType=None</arg>
+<arg>message: NoneType=None</arg>
 </arguments>
 <doc>Waits until the current URL is ``expected``.
 
@@ -3589,8 +3589,8 @@ New in SeleniumLibrary 4.0</doc>
 <kw name="Wait Until Location Is Not">
 <arguments>
 <arg>location</arg>
-<arg>timeout=None</arg>
-<arg>message=None</arg>
+<arg>timeout: NoneType=None</arg>
+<arg>message: NoneType=None</arg>
 </arguments>
 <doc>Waits until the current URL is not ``location``.
 
@@ -3610,8 +3610,8 @@ New in SeleniumLibrary 4.3</doc>
 <kw name="Wait Until Page Contains">
 <arguments>
 <arg>text</arg>
-<arg>timeout=None</arg>
-<arg>error=None</arg>
+<arg>timeout: NoneType=None</arg>
+<arg>error: NoneType=None</arg>
 </arguments>
 <doc>Waits until ``text`` appears on the current page.
 
@@ -3626,8 +3626,9 @@ and their default value.
 <kw name="Wait Until Page Contains Element">
 <arguments>
 <arg>locator</arg>
-<arg>timeout=None</arg>
-<arg>error=None</arg>
+<arg>timeout: NoneType=None</arg>
+<arg>error: NoneType=None</arg>
+<arg>limit: NoneType=None</arg>
 </arguments>
 <doc>Waits until the element ``locator`` appears on the current page.
 
@@ -3636,15 +3637,22 @@ the `Timeouts` section for more information about using timeouts and
 their default value and the `Locating elements` section for details
 about the locator syntax.
 
-``error`` can be used to override the default error message.</doc>
+``error`` can be used to override the default error message.
+
+The ``limit`` argument can used to define how many elements the
+page should contain. When ``limit`` is `None` (default) page can
+contain one or more elements. When limit is a number, page must
+contain same number of elements.
+
+``limit`` is new in SeleniumLibrary 4.4</doc>
 <tags>
 </tags>
 </kw>
 <kw name="Wait Until Page Does Not Contain">
 <arguments>
 <arg>text</arg>
-<arg>timeout=None</arg>
-<arg>error=None</arg>
+<arg>timeout: NoneType=None</arg>
+<arg>error: NoneType=None</arg>
 </arguments>
 <doc>Waits until ``text`` disappears from the current page.
 
@@ -3659,8 +3667,9 @@ and their default value.
 <kw name="Wait Until Page Does Not Contain Element">
 <arguments>
 <arg>locator</arg>
-<arg>timeout=None</arg>
-<arg>error=None</arg>
+<arg>timeout: NoneType=None</arg>
+<arg>error: NoneType=None</arg>
+<arg>limit: NoneType=None</arg>
 </arguments>
 <doc>Waits until the element ``locator`` disappears from the current page.
 
@@ -3669,7 +3678,14 @@ the `Timeouts` section for more information about using timeouts and
 their default value and the `Locating elements` section for details
 about the locator syntax.
 
-``error`` can be used to override the default error message.</doc>
+``error`` can be used to override the default error message.
+
+The ``limit`` argument can used to define how many elements the
+page should not contain. When ``limit`` is `None` (default) page can`t
+contain any elements. When limit is a number, page must not
+contain same number of elements.
+
+``limit`` is new in SeleniumLibrary 4.4</doc>
 <tags>
 </tags>
 </kw>
